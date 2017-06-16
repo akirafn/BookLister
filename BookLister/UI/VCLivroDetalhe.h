@@ -10,4 +10,9 @@
 
 @interface VCLivroDetalhe : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *txtTitulo;
+@property (weak, nonatomic) IBOutlet UITextField *txtSumario;
+@property (weak, nonatomic) IBOutlet UIButton *btnSalvar;
+
+- (IBAction)salvarDados:(id)sender;
 @end

@@ -6,4 +6,13 @@
 //  Copyright © 2017 Flavio Akira Nakahara. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Book.h"
+
+@implementation Book
+
+@synthesize bookId;
+@synthesize bookName;
+@synthesize bookGenre;
+@synthesize bookSummary;
+
+@end

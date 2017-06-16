@@ -8,18 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		CE0D168644B68552E69CADBD /* libPods-BookLister.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFF4B840608A53B51123EB6 /* libPods-BookLister.a */; };
+		E9C7FC191EF41EBC009AFF90 /* VCHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC181EF41EBC009AFF90 /* VCHome.m */; };
+		E9C7FC1D1EF44D24009AFF90 /* VCLivroDetalhe.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */; };
+		E9C7FC201EF44D43009AFF90 /* VCLivroLista.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */; };
 		E9F56E4F1EF1836D0050580C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E4E1EF1836D0050580C /* main.m */; };
 		E9F56E521EF1836D0050580C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E511EF1836D0050580C /* AppDelegate.m */; };
 		E9F56E551EF1836D0050580C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E541EF1836D0050580C /* ViewController.m */; };
 		E9F56E581EF1836D0050580C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F56E561EF1836D0050580C /* Main.storyboard */; };
 		E9F56E5A1EF1836D0050580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F56E591EF1836D0050580C /* Assets.xcassets */; };
 		E9F56E5D1EF1836D0050580C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F56E5B1EF1836D0050580C /* LaunchScreen.storyboard */; };
+		E9F56E691EF1DF0D0050580C /* BookList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9F56E681EF1DF0D0050580C /* BookList.plist */; };
+		E9F56E6D1EF1E2760050580C /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E6C1EF1E2760050580C /* Book.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5FFF4B840608A53B51123EB6 /* libPods-BookLister.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookLister.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46A22584F2FE97E34F8C416 /* Pods-BookLister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLister.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookLister/Pods-BookLister.release.xcconfig"; sourceTree = "<group>"; };
 		CFD6B51A1040FF0F8365284B /* Pods-BookLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookLister/Pods-BookLister.debug.xcconfig"; sourceTree = "<group>"; };
+		E9C7FC171EF41EBC009AFF90 /* VCHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCHome.h; path = UI/VCHome.h; sourceTree = "<group>"; };
+		E9C7FC181EF41EBC009AFF90 /* VCHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCHome.m; path = UI/VCHome.m; sourceTree = "<group>"; };
+		E9C7FC1B1EF44D24009AFF90 /* VCLivroDetalhe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLivroDetalhe.h; path = UI/VCLivroDetalhe.h; sourceTree = "<group>"; };
+		E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLivroDetalhe.m; path = UI/VCLivroDetalhe.m; sourceTree = "<group>"; };
+		E9C7FC1E1EF44D43009AFF90 /* VCLivroLista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLivroLista.h; path = UI/VCLivroLista.h; sourceTree = "<group>"; };
+		E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLivroLista.m; path = UI/VCLivroLista.m; sourceTree = "<group>"; };
 		E9F56E4A1EF1836D0050580C /* BookLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F56E4E1EF1836D0050580C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9F56E501EF1836D0050580C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,6 +41,9 @@
 		E9F56E591EF1836D0050580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F56E5C1EF1836D0050580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9F56E5E1EF1836D0050580C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F56E661EF1A3360050580C /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Model/Book.h; sourceTree = "<group>"; };
+		E9F56E681EF1DF0D0050580C /* BookList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BookList.plist; path = Model/BookList.plist; sourceTree = "<group>"; };
+		E9F56E6C1EF1E2760050580C /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E9C7FC161EF414E2009AFF90 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9C7FC171EF41EBC009AFF90 /* VCHome.h */,
+				E9C7FC181EF41EBC009AFF90 /* VCHome.m */,
+				E9C7FC1B1EF44D24009AFF90 /* VCLivroDetalhe.h */,
+				E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */,
+				E9C7FC1E1EF44D43009AFF90 /* VCLivroLista.h */,
+				E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		E9F56E411EF1836D0050580C = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +109,8 @@
 		E9F56E4C1EF1836D0050580C /* BookLister */ = {
 			isa = PBXGroup;
 			children = (
+				E9C7FC161EF414E2009AFF90 /* UI */,
+				E9F56E651EF1A3050050580C /* Model */,
 				E9F56E501EF1836D0050580C /* AppDelegate.h */,
 				E9F56E511EF1836D0050580C /* AppDelegate.m */,
 				E9F56E531EF1836D0050580C /* ViewController.h */,
@@ -101,6 +130,16 @@
 				E9F56E4E1EF1836D0050580C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9F56E651EF1A3050050580C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9F56E661EF1A3360050580C /* Book.h */,
+				E9F56E681EF1DF0D0050580C /* BookList.plist */,
+				E9F56E6C1EF1E2760050580C /* Book.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +206,7 @@
 				E9F56E5D1EF1836D0050580C /* LaunchScreen.storyboard in Resources */,
 				E9F56E5A1EF1836D0050580C /* Assets.xcassets in Resources */,
 				E9F56E581EF1836D0050580C /* Main.storyboard in Resources */,
+				E9F56E691EF1DF0D0050580C /* BookList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F56E6D1EF1E2760050580C /* Book.m in Sources */,
+				E9C7FC1D1EF44D24009AFF90 /* VCLivroDetalhe.m in Sources */,
 				E9F56E551EF1836D0050580C /* ViewController.m in Sources */,
+				E9C7FC201EF44D43009AFF90 /* VCLivroLista.m in Sources */,
 				E9F56E521EF1836D0050580C /* AppDelegate.m in Sources */,
+				E9C7FC191EF41EBC009AFF90 /* VCHome.m in Sources */,
 				E9F56E4F1EF1836D0050580C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +430,7 @@
 				E9F56E631EF1836D0050580C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

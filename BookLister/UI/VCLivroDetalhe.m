@@ -14,9 +14,14 @@
 
 @implementation VCLivroDetalhe
 
+@synthesize txtTitulo;
+@synthesize txtSumario;
+@synthesize btnSalvar;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +38,60 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)salvarDados:(id)sender {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *plistFilePath = [documentDirectory stringByAppendingPathComponent:@"BookList.plist"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+    NSMutableArray *contentArray = [[NSMutableArray alloc] init];
+    
+    if(![fileManager fileExistsAtPath:plistFilePath]){
+        NSLog(@"Arquivo nao existe");
+        
+        plistFilePath = [documentDirectory stringByAppendingPathComponent:@"BookList.plist"];
+    } else{
+        NSLog(@"Arquivo existe! Carregar dados existentes.");
+        
+        contentArray = [[NSMutableArray alloc] initWithContentsOfFile:plistFilePath];
+    }
+    
+    NSString *strTitulo = txtTitulo.text;
+    NSString *strSumario = txtSumario.text;
+    
+    if((strTitulo.length > 1) && (strSumario.length > 1)){
+        [data setValue:strTitulo forKey:@"Titulo"];
+        [data setValue:strSumario forKey:@"Sumario"];
+        
+        [contentArray addObject:data];
+        
+        if([contentArray writeToFile:plistFilePath atomically:YES]){
+            NSLog(@"Dados salvos com sucesso!");
+            
+            UIAlertController *alerta = [UIAlertController alertControllerWithTitle:@"Sucesso" message:@"Dados salvos com sucesso!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *botaoAlerta = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                [self dismissViewControllerAnimated:NO completion:nil];
+                [self.navigationController setNavigationBarHidden:YES];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }];
+            [alerta addAction:botaoAlerta];
+            [self presentViewController:alerta animated:YES completion:nil];
+        } else{
+            NSLog(@"Erro durante a operacao!");
+            
+            UIAlertController *alerta = [UIAlertController alertControllerWithTitle:@"Falha" message:@"Ocorreu erro durante a operacao!\nTente novamente." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *botaoAlerta = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alerta addAction:botaoAlerta];
+            [self presentViewController:alerta animated:YES completion:nil];
+        }
+    } else{
+        UIAlertController *alerta = [UIAlertController alertControllerWithTitle:@"Alerta" message:@"Favor entrar dados devidamente!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *botaoAlerta = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alerta addAction:botaoAlerta];
+        [self presentViewController:alerta animated:YES completion:nil];
+    }
+}
 
 @end

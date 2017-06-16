@@ -6,8 +6,18 @@
 //  Copyright © 2017 Flavio Akira Nakahara. All rights reserved.
 //
 
-#ifndef Book_h
-#define Book_h
+#import <UIKit/UIKit.h>
 
+@interface Book : NSObject {
+    NSInteger bookId;
+    NSString *bookName;
+    NSString *bookGenre;
+    NSString *bookSummary;
+}
 
-#endif /* Book_h */
+@property(nonatomic) NSInteger bookId;
+@property(nonatomic, strong) NSString *bookName;
+@property(nonatomic, strong) NSString *bookGenre;
+@property(nonatomic, strong) NSString *bookSummary;
+
+@end

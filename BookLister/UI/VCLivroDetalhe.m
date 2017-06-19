@@ -40,9 +40,7 @@
 */
 
 - (IBAction)salvarDados:(id)sender {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *plistFilePath = [documentDirectory stringByAppendingPathComponent:@"BookList.plist"];
+    NSString *plistFilePath = [[NSBundle mainBundle] pathForResource:@"BookList" ofType:@"plist"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
@@ -51,7 +49,6 @@
     if(![fileManager fileExistsAtPath:plistFilePath]){
         NSLog(@"Arquivo nao existe");
         
-        plistFilePath = [documentDirectory stringByAppendingPathComponent:@"BookList.plist"];
     } else{
         NSLog(@"Arquivo existe! Carregar dados existentes.");
         

@@ -14,6 +14,8 @@
 
 @implementation VCLivroLista
 
+@synthesize arrayLivro;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -22,6 +24,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *plistFilePath = [[NSBundle mainBundle] pathForResource:@"BookList" ofType:@"plist"];
+    arrayLivro = [NSArray arrayWithContentsOfFile:plistFilePath];
+    
     [self.navigationController setNavigationBarHidden:NO];
 }
 
@@ -33,24 +38,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.arrayLivro count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookCell"];
     
-    // Configure the cell...
+    NSMutableDictionary *dict = [arrayLivro objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[dict objectForKey:@"Titulo"]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

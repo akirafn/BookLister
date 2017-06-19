@@ -10,4 +10,6 @@
 
 @interface VCLivroLista : UITableViewController
 
+@property(strong, nonatomic) NSArray *arrayLivro;
+
 @end

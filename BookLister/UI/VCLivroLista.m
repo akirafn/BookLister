@@ -7,6 +7,7 @@
 //
 
 #import "VCLivroLista.h"
+#import "VCLivroListaCell.h"
 
 @interface VCLivroLista ()
 
@@ -42,15 +43,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.arrayLivro count];
+    return [arrayLivro count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookCell"];
+    VCLivroListaCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomBookCell" forIndexPath:indexPath];
     
     NSMutableDictionary *dict = [arrayLivro objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[dict objectForKey:@"Titulo"]];
+    [cell.lblTitulo setText:[dict objectForKey:@"Titulo"]];
+    [cell.lblSumario setText:[dict objectForKey:@"Sumario"]];
+    [cell.imgIcone setImage:[UIImage imageNamed:@"book-icon-91381.png"]];
     
     return cell;
 }

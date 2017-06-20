@@ -11,6 +11,8 @@
 		E9C7FC191EF41EBC009AFF90 /* VCHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC181EF41EBC009AFF90 /* VCHome.m */; };
 		E9C7FC1D1EF44D24009AFF90 /* VCLivroDetalhe.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */; };
 		E9C7FC201EF44D43009AFF90 /* VCLivroLista.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */; };
+		E9DB544C1EF99EDD002801BD /* VCLivroListaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DB544B1EF99EDD002801BD /* VCLivroListaCell.m */; };
+		E9DB54501EF9CDA7002801BD /* book-icon-91381.png in Resources */ = {isa = PBXBuildFile; fileRef = E9DB544F1EF9CDA7002801BD /* book-icon-91381.png */; };
 		E9F56E4F1EF1836D0050580C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E4E1EF1836D0050580C /* main.m */; };
 		E9F56E521EF1836D0050580C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E511EF1836D0050580C /* AppDelegate.m */; };
 		E9F56E551EF1836D0050580C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F56E541EF1836D0050580C /* ViewController.m */; };
@@ -31,6 +33,9 @@
 		E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLivroDetalhe.m; path = UI/VCLivroDetalhe.m; sourceTree = "<group>"; };
 		E9C7FC1E1EF44D43009AFF90 /* VCLivroLista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLivroLista.h; path = UI/VCLivroLista.h; sourceTree = "<group>"; };
 		E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLivroLista.m; path = UI/VCLivroLista.m; sourceTree = "<group>"; };
+		E9DB544A1EF99EDD002801BD /* VCLivroListaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLivroListaCell.h; path = UI/VCLivroListaCell.h; sourceTree = "<group>"; };
+		E9DB544B1EF99EDD002801BD /* VCLivroListaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLivroListaCell.m; path = UI/VCLivroListaCell.m; sourceTree = "<group>"; };
+		E9DB544F1EF9CDA7002801BD /* book-icon-91381.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-icon-91381.png"; sourceTree = "<group>"; };
 		E9F56E4A1EF1836D0050580C /* BookLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F56E4E1EF1836D0050580C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9F56E501EF1836D0050580C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,8 +89,18 @@
 				E9C7FC1C1EF44D24009AFF90 /* VCLivroDetalhe.m */,
 				E9C7FC1E1EF44D43009AFF90 /* VCLivroLista.h */,
 				E9C7FC1F1EF44D43009AFF90 /* VCLivroLista.m */,
+				E9DB544A1EF99EDD002801BD /* VCLivroListaCell.h */,
+				E9DB544B1EF99EDD002801BD /* VCLivroListaCell.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		E9DB544E1EF9CD65002801BD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E9DB544F1EF9CDA7002801BD /* book-icon-91381.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		E9F56E411EF1836D0050580C = {
@@ -109,6 +124,7 @@
 		E9F56E4C1EF1836D0050580C /* BookLister */ = {
 			isa = PBXGroup;
 			children = (
+				E9DB544E1EF9CD65002801BD /* Resource */,
 				E9C7FC161EF414E2009AFF90 /* UI */,
 				E9F56E651EF1A3050050580C /* Model */,
 				E9F56E501EF1836D0050580C /* AppDelegate.h */,
@@ -206,6 +222,7 @@
 				E9F56E5D1EF1836D0050580C /* LaunchScreen.storyboard in Resources */,
 				E9F56E5A1EF1836D0050580C /* Assets.xcassets in Resources */,
 				E9F56E581EF1836D0050580C /* Main.storyboard in Resources */,
+				E9DB54501EF9CDA7002801BD /* book-icon-91381.png in Resources */,
 				E9F56E691EF1DF0D0050580C /* BookList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +289,7 @@
 				E9F56E521EF1836D0050580C /* AppDelegate.m in Sources */,
 				E9C7FC191EF41EBC009AFF90 /* VCHome.m in Sources */,
 				E9F56E4F1EF1836D0050580C /* main.m in Sources */,
+				E9DB544C1EF99EDD002801BD /* VCLivroListaCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

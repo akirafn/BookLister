@@ -13,16 +13,30 @@
 @end
 
 @implementation VCHome
+@synthesize lblInfo;
+@synthesize arrayLivro;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadInfo];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadInfo{
+    NSString *plistFilePath = [[NSBundle mainBundle] pathForResource:@"BookList" ofType:@"plist"];
+    arrayLivro = [NSArray arrayWithContentsOfFile:plistFilePath];
+    [self.lblInfo setText:[NSString stringWithFormat:@"Foram encontrados %ld registros.", arrayLivro.count]];
 }
 
 /*

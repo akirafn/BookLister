@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface VCHome : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
+@property(strong, nonatomic) NSArray *arrayLivro;
+
+- (void)loadInfo;
 
 @end
